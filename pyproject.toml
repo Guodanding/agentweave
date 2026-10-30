@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentweave"
+version = "0.0"
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+description = "a lightweight Agent Serving implementation built from scratch"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "transformers",
+    # Validated together for knowledge-base dataset loading.
+    "datasets==2.21.0",
+    "pyarrow==20.0.0",
+    "fsspec==2024.6.1",
+    "sglang==0.5.5",
+    "python-dotenv",
+    "aiohttp",
+    "uvicorn",
+    "fastapi",
+    "llama-index",
+    "nltk==3.9.4",
+    "ray",
+    "rich",
+    "xfuser",
+    "sentence_transformers",
+    "scikit-learn",
+    "faiss-cpu",
+    "joblib",
+    "matplotlib"
+    # "faiss-gpu-cu12", 
+]
+
+[project.urls]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
