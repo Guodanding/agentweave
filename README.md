@@ -36,13 +36,13 @@ AgentWeave represents each module's input or output as a *flow*. A *flow depende
 
 **Problem Formulation.** AgentWeave selects the decomposition size online in each scheduling round. Let $\mathcal{R}$ be the current request set, $w_i$ the remaining workload of request $r_i$, and $\mathcal{S}$ the set of candidate decomposition sizes. For each $S \in \mathcal{S}$, the estimated round time is
 
-$$
+```math
 T_{\mathrm{total}}(S) = T_{\mathrm{exec}}(S,\mathcal{R}) + O(S).
-$$
+```
 
 The throughput-gain and accumulated-overhead objectives are
 
-$$
+```math
 J_{\mathrm{gain}}(S)
 =
 \frac{\sum_{r_i \in \mathcal{R}} \min(1,S/w_i)}
@@ -52,11 +52,11 @@ O_{\mathrm{total}}(S)
 =
 \sum_{r_i \in \mathcal{R}}
 \left\lceil \frac{w_i}{S} \right\rceil O(S).
-$$
+```
 
 **Scheduling Objective.** The scheduler combines both objectives into a single score and selects the highest-scoring size greedily. Here, $\bar{T}_{\mathrm{exec}}$ is the system's average execution time.
 
-$$
+```math
 S^\star = \arg\max_{S \in \mathcal{S}} \mathrm{Score}(S),
 \qquad
 \mathrm{Score}(S)
@@ -65,7 +65,7 @@ J_{\mathrm{gain}}(S)
 -
 \frac{|\mathcal{R}|}{\bar{T}_{\mathrm{exec}}^2}
 \, O_{\mathrm{total}}(S).
-$$
+```
 
 ![AgentWeave system overview showing offline decomposition and profiling, online scheduling, and the aggregated execution engine](./assets/system-overview.png)
 
