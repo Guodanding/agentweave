@@ -128,12 +128,12 @@ Read the answers or analyze the performance:
 ## Citation
 
 ```bibtex
-@inproceedings{guo2026agentweave,
-  title     = {{AgentWeave}: Efficient Distributed Agent Serving via Flow Decomposition},
-  author    = {Guo, Kaibin and Li, Pengtu and Hong, Zicong and Fang, Zhiyuan and
-               Chen, Wuhui and Guerraoui, Rachid and Kermarrec, Anne-Marie},
-  booktitle = {Advances in Neural Information Processing Systems},
-  year      = {2026},
-  url       = {https://arxiv.org/abs/2610.14804}
+@inproceedings{
+guo2026agentweave,
+title={AgentWeave: Efficient Distributed Agent Serving via Flow Decomposition},
+author={Kaibin Guo and Pengtu Li and Zicong Hong and Zhiyuan Fang and Wuhui Chen and Rachid Guerraoui and Anne-Marie Kermarrec},
+booktitle={The Fortieth Annual Conference on Neural Information Processing Systems},
+year={2026},
+url={https://openreview.net/forum?id=bpk2nFIPmf}
 }
 ```
